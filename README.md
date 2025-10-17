@@ -67,4 +67,6 @@ Once you are done with all this, you can start preparing the print and slicing i
 Once you have your makerbot file ready and saved to your computer, run the CuraToZ18.py script on it, or drag and drop the makerbot file onto the binary exe.
 You can then send the converted makerbot file to your Z18 printer using MakerBot Print or MakerBot Desktop.
 
+Due to firmware limitations, changing the extruder temperature during printing does not work. I'm trying to find a workaround.
+
 Happy printing!
