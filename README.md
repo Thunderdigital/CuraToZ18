@@ -34,7 +34,7 @@ Add a printer:
 
 -Add a non-networked-printer
 
--UltiMaker Method XL
+-UltiMaker Method X
 
 
 Then you need to change a few parameters in the Machine Settings / Printer tab:
