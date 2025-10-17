@@ -32,6 +32,7 @@ X (Width) 305mm
 Y (Depth) 305mm
 Z (Height) 457mm
 Start G-code and End G-code BLANK
+
 X min -20 mm
 Y min -10mm
 X max 20mm
