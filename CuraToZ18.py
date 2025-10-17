@@ -214,7 +214,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("---------------------------------------------------------")
         print("ERROR: Please specify the .makerbot file to process!")
-        print("Usage: python MakerbotTool.py <filename.makerbot>")
+        print("Usage: python CuraToZ18.py <filename.makerbot>")
         print("---------------------------------------------------------")
         input("Press Enter to exit...")
         sys.exit(1)
