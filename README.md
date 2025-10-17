@@ -38,8 +38,7 @@ Add a printer:
 -UltiMaker Method XL
 
 
-Then you need to change a few parameters in the Machine Settings:
-Printer tab:
+Then you need to change a few parameters in the Machine Settings / Printer tab:
 
 X (Width) 305mm
 
