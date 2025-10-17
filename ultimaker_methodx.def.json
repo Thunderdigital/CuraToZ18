@@ -61,9 +61,9 @@
             0,
             0
         ],
-        "preferred_material": "ultimaker_absr_175",
+        "preferred_material": "ultimaker_pla_175",
         "preferred_quality_type": "draft",
-        "preferred_variant_name": "1XA",
+        "preferred_variant_name": "1A",
         "reference_machine_id": "lava_f",
         "supports_network_connection": true,
         "supports_usb_connection": false,
