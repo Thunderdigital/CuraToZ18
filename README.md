@@ -5,9 +5,9 @@ MANUAL:
 
 After installing Cura, you need to replace 2 files with the ones found here.
 
-ultimaker_method_base.def.json
+-ultimaker_method_base.def.json
 
-ultimaker_methodx.def.json
+-ultimaker_methodx.def.json
 
 These are in the
 C:\Program Files\UltiMaker Cura 5.10.2\share\cura\resources\definitions
@@ -17,7 +17,7 @@ ultimaker_methodx.def.json.orig
 
 Then put the
 
-print_bed_makerbot_replicator_z18.stl
+-print_bed_makerbot_replicator_z18.stl
 
 file in the
 C:\Program Files\UltiMaker Cura 5.10.2\share\cura\resources\meshes
@@ -27,15 +27,15 @@ You can then start Cura.
 
 Add a printer:
 
-Add new
+-Add new
 
-UltiMaker Printer
+-UltiMaker Printer
 
-Add Local Printer
+-Add Local Printer
 
-Add a non-networked-printer
+-Add a non-networked-printer
 
-UltiMaker Method XL
+-UltiMaker Method XL
 
 
 Then you need to change a few parameters in the Machine Settings:
