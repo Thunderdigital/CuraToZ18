@@ -12,8 +12,7 @@ After installing Cura, you need to replace 2 files with the ones found here.
 These are in the
 C:\Program Files\UltiMaker Cura 5.10.2\share\cura\resources\definitions
 folder. It is worth keeping the original, renaming it.
-e.g. ultimaker_method_base.def.json.orig
-ultimaker_methodx.def.json.orig
+e.g. ultimaker_method_base.def.json.orig; ultimaker_methodx.def.json.orig
 
 Then put the
 
