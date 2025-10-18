@@ -55,11 +55,11 @@ Z (Height) 457mm
 
 Start G-code and End G-code are BLANK
 
-X min -35mm
+Xmin -35mm
 
-Y min -15mm
+Ymin -15mm
 
-X max 35mm
+Xmax 35mm
 
 Ymax 15mm
 
