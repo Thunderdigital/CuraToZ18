@@ -72,7 +72,17 @@ Of course, you can rename your printer to Makerbot Z18.
 Once you are done with all this, you can start preparing the print and slicing in Cura.
 Once you have your makerbot file ready and saved to your computer, run the CuraToZ18.py script on it.
 
-Usage: python CuraToZ18.py <filename.makerbot> or CuraToZ18.exe <filename.makerbot> or drag and drop.
+Usage: 
+
+python CuraToZ18.py <filename.makerbot> 
+
+or 
+
+CuraToZ18.exe <filename.makerbot> 
+
+or 
+
+drag and drop.
 
 You can then send the converted makerbot file to your Z18 printer using MakerBot Print or MakerBot Desktop.
 
