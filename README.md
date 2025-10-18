@@ -50,11 +50,11 @@ Start G-code and End G-code are BLANK
 
 X min -20 mm
 
-Y min -10mm
+Y min -20mm
 
 X max 20mm
 
-Ymax 10mm
+Ymax 20mm
 
 Gantry Height 457mm
 
