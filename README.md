@@ -55,13 +55,13 @@ Z (Height) 457mm
 
 Start G-code and End G-code are BLANK
 
-X min -20 mm
+X min -35mm
 
-Y min -20mm
+Y min -15mm
 
-X max 20mm
+X max 35mm
 
-Ymax 20mm
+Ymax 15mm
 
 Gantry Height 15mm
 
