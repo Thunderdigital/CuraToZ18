@@ -6,6 +6,7 @@ MANUAL:
 After installing Cura, you need to replace 2 files with the ones found here.
 
 -ultimaker_method_base.def.json
+
 -ultimaker_methodx.def.json
 
 These are in the
@@ -22,7 +23,9 @@ C:\Program Files\UltiMaker Cura 5.10.2\share\cura\resources\extruders
 folder.
 
 Then put the
+
 -print_bed_makerbot_replicator_z18.stl
+
 file in the
 C:\Program Files\UltiMaker Cura 5.10.2\share\cura\resources\meshes
 folder. This actually just displays the Z18 bed in Cura, but I think it looks nice. 😊
