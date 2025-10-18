@@ -63,7 +63,7 @@ X max 20mm
 
 Ymax 20mm
 
-Gantry Height 457mm
+Gantry Height 15mm
 
 Number of Extruders 1
 
