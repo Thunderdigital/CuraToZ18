@@ -33,27 +33,38 @@ folder. This actually just displays the Z18 bed in Cura, but I think it looks ni
 You can then start Cura.
 
 Add a printer:
+
 -Add new
+
 -UltiMaker Printer
+
 -Add Local Printer
+
 -Add a non-networked-printer
+
 -UltiMaker Method X
 
 
 Then you need to change a few parameters in the Machine Settings / Printer tab:
 
 X (Width) 305mm
+
 Y (Depth) 305mm
+
 Z (Height) 457mm
+
 Start G-code and End G-code are BLANK
 
-
 X min -20 mm
+
 Y min -20mm
+
 X max 20mm
+
 Ymax 20mm
 
 Gantry Height 457mm
+
 Number of Extruders 1
 
 Of course, you can rename your printer to Makerbot Z18.
