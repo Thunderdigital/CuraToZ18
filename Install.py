@@ -171,7 +171,7 @@ machine_use_extruder_offset_to_offset_coords = False
         "cool_fan_full_at_height": { "value": "layer_height + layer_height_0" },
         "cool_fan_speed": { "value": 100 },
         "cool_fan_speed_0": { "value": 0 },
-        "cool_min_layer_time": { "value": 7 },
+        "cool_min_layer_time": { "value": 1 },
         "extruder_prime_pos_abs": { "default_value": true },
         "fill_outline_gaps": { "value": true },
         "gantry_height": { "value": "60" },
@@ -424,14 +424,14 @@ machine_use_extruder_offset_to_offset_coords = False
         {
             "maximum_value": 5,
             "maximum_value_warning": 2.5,
-            "value": 1.0
+            "value": 0.5
         },
         "retraction_combing": { "value": "'no_outer_surfaces'" },
         "retraction_count_max":
         {
-            "maximum_value": 700,
+            "maximum_value": 1000,
             "maximum_value_warning": 600,
-            "value": 500
+            "value": 1000
         },
         "retraction_extra_prime_amount": { "value": 0.1 },
         "retraction_min_travel": { "value": "2 * line_width" },
@@ -465,7 +465,7 @@ machine_use_extruder_offset_to_offset_coords = False
         "speed_topbottom": { "value": "speed_roofing" },
         "speed_travel": { "value": 150 },
         "speed_wall": { "value": "1 * speed_print" },
-        "speed_wall_0": { "value": "4/9 * speed_wall" },
+        "speed_wall_0": { "value": "1/2 * speed_wall" },
         "speed_wall_x": { "value": "1 * speed_wall" },
         "speed_z_hop": { "value": 8 },
         "support_angle": { "value": 68 },
@@ -573,7 +573,9 @@ machine_use_extruder_offset_to_offset_coords = False
             "maximum_values": 8,
             "value": 8
         },
-		
+		"retraction_hop": { "value": 0.8 },
+        "retraction_hop_enabled": { "value": true },
+        
 		"machine_max_feedrate_x": { "default_value": 175 },
         "machine_max_feedrate_y": { "default_value": 175 },
 		"machine_max_feedrate_z": { "default_value": 8 },
@@ -673,7 +675,7 @@ layer_height_0 = 0.3
 cool_fan_speed = 100
 cool_fan_speed_0 = 0
 print_speed = 90
-wall_speed" = 40
+wall_speed = 40
 infill_sparse_density = 15
 infill_speed = 110
 speed_travel = 150
@@ -752,7 +754,6 @@ type = quality
 weight = 30
 
 [values]
-cool_min_layer_time = 3
 infill_sparse_density = 10
 layer_height = 0.15
 speed_infill = =math.ceil(speed_print * 100 / 60)
