@@ -657,28 +657,68 @@ layer_height_0 = 0.3
 material_shrinkage_percentage = 100
 support_enable = False
 """,
-    r"%APPDATA%\cura\5.11\quality\coarse.inst.cfg":"""[general]
+    r"%APPDATA%\cura\5.11\quality\high.inst.cfg":
+r"""[general]
 definition = fdmprinter
-name = Coarse
+name = Extra Fine
 version = 4
 
 [metadata]
 global_quality = True
-quality_type = coarse
+quality_type = high
 setting_version = 25
 type = quality
-weight = 0
+weight = 1
 
 [values]
-layer_height = 0.4
+layer_height = 0.1
 layer_height_0 = 0.3
-cool_fan_speed = 100
-cool_fan_speed_0 = 0
-print_speed = 90
-wall_speed = 40
-infill_sparse_density = 15
-infill_speed = 110
-speed_travel = 150
+infill_sparse_density = 20
+speed_infill = =math.ceil(speed_print * 60 / 100)
+speed_topbottom = =math.ceil(speed_print * 30 / 60)
+speed_wall_0 = =math.ceil(speed_print * 40 / 60)
+speed_wall_x = =math.ceil(speed_print * 60 / 80)
+
+""",
+    r"%APPDATA%\cura\5.11\quality\normal.inst.cfg":
+r"""[general]
+definition = fdmprinter
+name = Fine
+version = 4
+
+[metadata]
+global_quality = True
+quality_type = normal
+setting_version = 25
+type = quality
+weight = 1
+
+[values]
+layer_height = 0.1
+layer_height_0 = 0.3
+infill_sparse_density = 10
+""",
+    r"%APPDATA%\cura\5.11\quality\fast.inst.cfg":
+r"""[general]
+definition = fdmprinter
+name = Normal
+version = 4
+
+[metadata]
+global_quality = True
+quality_type = fast
+setting_version = 25
+type = quality
+weight = 1
+
+[values]
+layer_height = 0.15
+layer_height_0 = 0.3
+infill_sparse_density = 20
+speed_infill = =math.ceil(speed_print * 100 / 60)
+speed_topbottom = =math.ceil(speed_print * 30 / 60)
+speed_wall_0 = =math.ceil(speed_print * 40 / 60)
+speed_wall_x = =math.ceil(speed_print * 80 / 60)
 
 """,
     r"%APPDATA%\cura\5.11\quality\draft.inst.cfg":"""[general]
@@ -691,37 +731,16 @@ global_quality = True
 quality_type = draft
 setting_version = 25
 type = quality
-weight = 20
+weight = 1
 
 [values]
 layer_height = 0.2
 layer_height_0 = 0.3
-cool_fan_speed = 100
-cool_fan_speed_0 = 0
 infill_sparse_density = 10
 
 """,
-    r"%APPDATA%\cura\5.11\quality\extra_coarse.inst.cfg":"""[general]
-definition = fdmprinter
-name = Extra Coarse
-version = 4
-
-[metadata]
-global_quality = True
-quality_type = extra coarse
-setting_version = 25
-type = quality
-weight = -10
-
-[values]
-layer_height = 0.6
-layer_height_0 = 0.3
-cool_fan_speed = 100
-cool_fan_speed_0 = 0
-infill_sparse_density = 10
-
-""",
-    r"%APPDATA%\cura\5.11\quality\extra_fast.inst.cfg":"""[general]
+    r"%APPDATA%\cura\5.11\quality\extra_fast.inst.cfg":
+r"""[general]
 definition = fdmprinter
 name = Extra Fast
 version = 4
@@ -731,39 +750,51 @@ global_quality = True
 quality_type = verydraft
 setting_version = 25
 type = quality
-weight = 10
+weight = 1
 
 [values]
 layer_height = 0.3
 layer_height_0 = 0.3
-cool_fan_speed = 100
-cool_fan_speed_0 = 0
-infill_sparse_density = 20
+infill_sparse_density = 10
 
 """,
-    r"%APPDATA%\cura\5.11\quality\fast.inst.cfg":"""[general]
+    r"%APPDATA%\cura\5.11\quality\coarse.inst.cfg":
+r"""[general]
 definition = fdmprinter
-name = Normal
+name = Coarse
 version = 4
 
 [metadata]
 global_quality = True
-quality_type = fast
+quality_type = coarse
 setting_version = 25
 type = quality
-weight = 30
+weight = 1
 
 [values]
-infill_sparse_density = 10
-layer_height = 0.15
-speed_infill = =math.ceil(speed_print * 100 / 60)
-speed_topbottom = =math.ceil(speed_print * 30 / 60)
-speed_wall_0 = =math.ceil(speed_print * 40 / 60)
-speed_wall_x = =math.ceil(speed_print * 80 / 60)
+layer_height = 0.4
 layer_height_0 = 0.3
-cool_fan_speed = 100
-cool_fan_speed_0 = 0
-infill_sparse_density = 20
+infill_sparse_density = 10
+
+
+""",
+    r"%APPDATA%\cura\5.11\quality\extra_coarse.inst.cfg":
+r"""[general]
+definition = fdmprinter
+name = Extra Coarse
+version = 4
+
+[metadata]
+global_quality = True
+quality_type = extra coarse
+setting_version = 25
+type = quality
+weight = 1
+
+[values]
+layer_height = 0.6
+layer_height_0 = 0.3
+infill_sparse_density = 10
 
 """,
     r"%APPDATA%\cura\5.11\quality\fast_extra_coarse.inst.cfg":"""[general]
@@ -776,58 +807,13 @@ global_quality = True
 quality_type = fast extra coarse
 setting_version = 25
 type = quality
-weight = -20
+weight = 1
 
 [values]
-layer_height = 0.6
+layer_height = 0.8
 layer_height_0 = 0.3
-cool_fan_speed = 100
-cool_fan_speed_0 = 0
-speed_print = 175
-speed_travel = 200
-acceleration_print = 850
 infill_sparse_density = 10
 
-""",
-    r"%APPDATA%\cura\5.11\quality\high.inst.cfg":"""[general]
-definition = fdmprinter
-name = Extra Fine
-version = 4
-
-[metadata]
-global_quality = True
-quality_type = high
-setting_version = 25
-type = quality
-weight = 50
-
-[values]
-layer_height = 0.06
-speed_infill = =math.ceil(speed_print * 80 / 60)
-speed_topbottom = =math.ceil(speed_print * 15 / 60)
-layer_height_0 = 0.3
-cool_fan_speed = 100
-cool_fan_speed_0 = 0
-infill_sparse_density = 20
-
-""",
-    r"%APPDATA%\cura\5.11\quality\normal.inst.cfg":"""[general]
-definition = fdmprinter
-name = Fine
-version = 4
-
-[metadata]
-global_quality = True
-quality_type = normal
-setting_version = 25
-type = quality
-weight = 40
-
-[values]
-layer_height_0 = 0.3
-cool_fan_speed = 100
-cool_fan_speed_0 = 0
-infill_sparse_density = 20
 """,
     r"%ProgramFiles%\UltiMaker Cura 5.11.0\share\cura\plugins\MakerbotWriter\MakerbotWriter.py":
 r"""# Copyright (c) 2024 UltiMaker
