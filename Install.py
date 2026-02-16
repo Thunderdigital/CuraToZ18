@@ -159,9 +159,9 @@ machine_use_extruder_offset_to_offset_coords = False
             "enabled": false,
             "value": "acceleration_wall"
         },
-        "adhesion_type": { "value": "'raft'" },
-        "bridge_skin_speed": { "value": 40 },
-        "bridge_wall_speed": { "value": 40 },
+        "adhesion_type": { "value": "skirt" },
+        "bridge_skin_speed": { "value": 20 },
+        "bridge_wall_speed": { "value": 20 },
         "brim_width": { "value": "3" },
         "cool_during_extruder_switch":
         {
@@ -186,7 +186,7 @@ machine_use_extruder_offset_to_offset_coords = False
         {
             "maximum_value": 300,
             "maximum_value_warning": 250,
-            "value": "125 if resolveOrValue('adhesion_type') == 'raft' else 200"
+            "value": "125 if resolveOrValue('adhesion_type') == 'raft' else 100"
         },
         "inset_direction": { "value": "'inside_out'" },
         "jerk_enabled":
@@ -437,18 +437,18 @@ machine_use_extruder_offset_to_offset_coords = False
         "retraction_min_travel": { "value": "2 * line_width" },
         "retraction_prime_speed":
         {
-            "maximum_values": 35,
-            "value": 30
+            "maximum_values": 8,
+            "value": 8
         },
         "retraction_retract_speed":
         {
-            "maximum_value": 55,
-            "value": 50
+            "maximum_value": 8,
+            "value": 8
         },
         "retraction_speed":
         {
-            "maximum_value": 55,
-            "value": 50
+            "maximum_value": 8,
+            "value": 8
         },
         "roofing_material_flow": { "value": "material_flow" },
         "skin_material_flow": { "value": "material_flow" },
@@ -467,7 +467,7 @@ machine_use_extruder_offset_to_offset_coords = False
         "speed_wall": { "value": "1 * speed_print" },
         "speed_wall_0": { "value": "4/9 * speed_wall" },
         "speed_wall_x": { "value": "1 * speed_wall" },
-        "speed_z_hop": { "value": 10 },
+        "speed_z_hop": { "value": 8 },
         "support_angle": { "value": 68 },
         "support_bottom_enable": { "value": false },
         "support_brim_enable": { "value": false },
@@ -510,7 +510,7 @@ machine_use_extruder_offset_to_offset_coords = False
         "manufacturer": "Ultimaker B.V.",
         "file_formats": "application/x-makerbot-replicator_plus",
         "platform": "print_bed_makerbot_replicator_z18.stl",
-        "has_materials": false,
+        "has_materials": true,
 		"has_variants": false,
         "machine_extruder_trains":
         {
@@ -567,7 +567,7 @@ machine_use_extruder_offset_to_offset_coords = False
         "machine_depth": { "default_value": 305 },
 		
 		"retraction_amount": { "default_value": 0.5 },
-        "retraction_speed": { "default_value": 50 },
+        "retraction_speed": { "default_value": 8 },
         "retraction_prime_speed":
         {
             "maximum_values": 8,
