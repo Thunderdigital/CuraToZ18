@@ -4,8 +4,8 @@ This version works only with Cura 5.11!
 
 MANUAL:
 
-After installing Cura 5.11, you need to run install.py
-This will make any necessary changes, install the new files.
+After installing Cura 5.11, you need to run install.py.
+This will make any necessary changes and installs the new files.
 It will create a backup of the modified files.
 
 You can then start Cura.
