@@ -1097,12 +1097,12 @@ def install():
             path = os.path.expandvars(raw_path)
             os.makedirs(os.path.dirname(path), exist_ok=True)
             
-            """if os.path.exists(path):
+            if os.path.exists(path):
                 backup = path + "_old"
                 if os.path.exists(backup):
                     os.remove(backup)
                 os.rename(path, backup)
-                log_message(f"BACKUP: {backup}")"""
+                log_message(f"BACKUP: {backup}")
 
             with open(path, "w", encoding="utf-8") as f:
                 f.write(content)
@@ -1121,3 +1121,4 @@ if __name__ == "__main__":
     else:
         print("Requesting administrator rights...")
         run_as_admin()
+
