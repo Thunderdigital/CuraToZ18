@@ -188,7 +188,7 @@ machine_use_extruder_offset_to_offset_coords = False
         "cool_fan_full_layer": { "value": 3 },
         "cool_fan_speed": { "value": 100 },
         "cool_fan_speed_0": { "value": 0 },
-        "cool_min_layer_time": { "value": 10 },
+        "cool_min_layer_time": { "value": 5 },
         "cool_min_speed": { "value": 20 },
         "extruder_prime_pos_abs": { "default_value": true },
         "fill_outline_gaps": { "value": true },
@@ -562,7 +562,7 @@ machine_use_extruder_offset_to_offset_coords = False
         "supports_usb_connection": false,
 		"variants_name": "Nozzle diameter",
         "variants_name_has_translation": true,
-        "weight": -1
+        "weight": 1
     },
         "overrides":
     {
@@ -649,7 +649,7 @@ post_processing_scripts =
 1 = empty_quality_changes
 2 = empty_intent
 3 = mb_replicator_z18_global_Balanced_Quality
-4 = empty_material
+4 = generic_pla_175
 5 = empty_variant
 6 = MakerBot Replicator Z18_settings
 7 = makerbot_replicator_z18
