@@ -163,7 +163,6 @@ machine_use_extruder_offset_to_offset_coords = False
         },
         "small_feature_speed_factor":{"enabled": true},
         "small_feature_speed_factor_0":{"enabled": true},
-        "adhesion_type": { "value": "skirt" },
         
         "bridge_enable_more_layers":{"enabled": true},
         "bridge_fan_speed_2": { "value": 100 },
@@ -480,10 +479,13 @@ machine_use_extruder_offset_to_offset_coords = False
         "skin_material_flow_layer_0": { "value": "material_flow" },
         "skin_line_width": { "value": "line_width" },
         
-        "skirt_brim_line_width": { "value": "line_width" },
+        "adhesion_type": { "value": "skirt" },
+        "skirt_brim_line_width": { "value": "1.5*line_width" },
         "skirt_brim_minimal_length": { "value": 10 },
-        "skirt_brim_speed": { "value": 10 },
-        "skirt_height": { "value": 3 },
+        "skirt_brim_speed": { "value": 15 },
+		"skirt_line_count": { "value": 1 },
+		"skirt_height": { "value": 1 },
+		"skirt_gap": { "value": 3 },
         
         "speed_equalize_flow_width_factor": { "value": 100 },
         "speed_print": { "value": 90 },
@@ -565,11 +567,7 @@ machine_use_extruder_offset_to_offset_coords = False
         "overrides":
     {
         "support_enable": { "value": "false" },
-		"adhesion_type": { "value": "skirt" },
-		"skirt_line_count": { "value": 1 },
-		"skirt_height": { "value": 1 },
-		"skirt_brim_minimal_length": { "value": 10 },
-		"skirt_gap": { "value": 3 },
+		
 		"top_bottom_pattern_0": { "value": "'concentric'" },
 		"top_bottom_pattern": { "value": "'lines'" },
 		"top_surface_skin_pattern": { "value": "'lines'" },
