@@ -156,11 +156,8 @@ machine_use_extruder_offset_to_offset_coords = False
         {
             "enabled": true,
             "value": "acceleration_wall"
-        },"acceleration_travel_enabled":
-        {
-            "enabled": true,
-            "value": true
         },
+        
         "small_feature_speed_factor":{"enabled": true},
         "small_feature_speed_factor_0":{"enabled": true},
         
@@ -318,7 +315,7 @@ machine_use_extruder_offset_to_offset_coords = False
             "enabled": true,
             "value": "jerk_wall"
         },
-        "layer_height_0": { "value": "0.3" },
+        "layer_height_0": { "value": "0.272" },
         "layer_start_x": { "value": "sum(extruderValues('machine_extruder_start_pos_x')) / len(extruderValues('machine_extruder_start_pos_x'))" },
         "layer_start_y": { "value": "sum(extruderValues('machine_extruder_start_pos_y')) / len(extruderValues('machine_extruder_start_pos_y'))" },
         "machine_center_is_zero": { "default_value": true },
@@ -376,7 +373,7 @@ machine_use_extruder_offset_to_offset_coords = False
         },
         "minimum_support_area": { "value": 0.5 },
         "multiple_mesh_overlap": { "value": "0" },
-        "optimize_wall_printing_order": { "value": "True" },
+        "optimize_wall_printing_order": { "value": true },
         "prime_blob_enable":
         {
             "default_value": false,
@@ -464,7 +461,7 @@ machine_use_extruder_offset_to_offset_coords = False
             "value": 50
         },
         "retraction_hop": { "value": 0.2 },
-        "retraction_hop_enabled": { "value": true },
+        "retraction_hop_enabled": { "value": false },
         "retraction_combing": { "value": "'no_outer_surfaces'" },
         "retraction_count_max":
         {
@@ -488,15 +485,16 @@ machine_use_extruder_offset_to_offset_coords = False
 		"skirt_gap": { "value": 3 },
         
         "speed_equalize_flow_width_factor": { "value": 100 },
-        "speed_print": { "value": 90 },
+        "speed_print": { "value": 70 },
+        "speed_infill": { "value": 100 },
         "speed_travel": { "value": 150 },
-        "speed_roofing": { "value": "1.2 * speed_print" },
-        "speed_support": { "value": "2 * speed_print" },
+        "speed_support": { "value": "speed_print" },
+        "speed_roofing": { "value": "speed_print * 0.5" },
         "speed_support_interface": { "value": "speed_support" },
         "speed_topbottom": { "value": "speed_roofing" },
-        "speed_wall": { "value": "1 * speed_print" },
-        "speed_wall_0": { "value": "1/2 * speed_wall" },
-        "speed_wall_x": { "value": "1.2 * speed_wall" },
+        "speed_wall": { "value": "speed_print" },
+        "speed_wall_0": { "value": "speed_wall * 0.5" },
+        "speed_wall_x": { "value": "speed_infill" },
         "speed_z_hop": { "value": 3 },
         
         "support_angle": { "value": 68 },
@@ -1099,12 +1097,12 @@ def install():
             path = os.path.expandvars(raw_path)
             os.makedirs(os.path.dirname(path), exist_ok=True)
             
-            if os.path.exists(path):
+            """if os.path.exists(path):
                 backup = path + "_old"
                 if os.path.exists(backup):
                     os.remove(backup)
                 os.rename(path, backup)
-                log_message(f"BACKUP: {backup}")
+                log_message(f"BACKUP: {backup}")"""
 
             with open(path, "w", encoding="utf-8") as f:
                 f.write(content)
