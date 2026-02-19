@@ -185,7 +185,7 @@ machine_use_extruder_offset_to_offset_coords = False
         "cool_fan_full_layer": { "value": 3 },
         "cool_fan_speed": { "value": 100 },
         "cool_fan_speed_0": { "value": 0 },
-        "cool_min_layer_time": { "value": 5 },
+        "cool_min_layer_time": { "value": 3 },
         "cool_min_speed": { "value": 20 },
         "extruder_prime_pos_abs": { "default_value": true },
         "fill_outline_gaps": { "value": true },
@@ -361,15 +361,15 @@ machine_use_extruder_offset_to_offset_coords = False
         },
         "min_bead_width":
         {
-            "minimum_value": "line_width * 0.5",
-            "minimum_value_warning": "line_width * 0.625",
-            "value": "line_width * 0.75"
+            "minimum_value": "line_width * 0.1",
+            "minimum_value_warning": "line_width * 0.4",
+            "value": "line_width * 0.5"
         },
         "min_wall_line_width":
         {
-            "minimum_value": "line_width * 0.5",
-            "minimum_value_warning": "line_width * 0.75",
-            "value": "line_width"
+            "minimum_value": "line_width * 0.1",
+            "minimum_value_warning": "line_width * 0.4",
+            "value": "line_width * 0.5"
         },
         "minimum_support_area": { "value": 0.5 },
         "multiple_mesh_overlap": { "value": "0" },
@@ -515,7 +515,11 @@ machine_use_extruder_offset_to_offset_coords = False
         "support_xy_distance": { "value": 0.3 },
         "support_z_distance": { "value": 0.2 },
         
-        "top_bottom_thickness": { "value": "4 * layer_height" },
+        "top_layers": { "value": 4 },
+        "bottom_layers": { "value": "top_layers" },
+        "roofing_layer_count": { "value": 1 },
+        "flooring_layer_count": { "value": 1 },
+        
         "travel_avoid_distance": { "value": 2 },
         "travel_avoid_supports": { "value": true },
         
@@ -568,7 +572,6 @@ machine_use_extruder_offset_to_offset_coords = False
 		
 		"top_bottom_pattern_0": { "value": "'concentric'" },
 		"top_bottom_pattern": { "value": "'lines'" },
-		"top_surface_skin_pattern": { "value": "'lines'" },
 		"skin_angles": { 
 			"value": 
 			[45, 135]
@@ -594,19 +597,17 @@ machine_use_extruder_offset_to_offset_coords = False
         "machine_width": { "default_value": 305 },
         "machine_depth": { "default_value": 305 },
         
-		"machine_max_feedrate_x": { "default_value": 200 },
-        "machine_max_feedrate_y": { "default_value": 200 },
-		"machine_max_feedrate_z": { "default_value": 15 },
-        "machine_max_feedrate_e": { "default_value": 15 },
+		"machine_max_feedrate_x": { "default_value": 175 },
+        "machine_max_feedrate_y": { "default_value": 175 },
+		"machine_max_feedrate_z": { "default_value": 3 },
+        "machine_max_feedrate_e": { "default_value": 8 },
 
-        "machine_max_jerk_xy": { "default_value": 20 },
-        "machine_max_jerk_z": { "default_value": 0 },
-		"machine_max_jerk_e": { "default_value": 0 },
-		
-		"machine_max_acceleration_x": { "value": 1000 },
-        "machine_max_acceleration_y": { "value": 1000 },
-        "machine_max_acceleration_z": { "value": 10 },
-        "machine_max_acceleration_e": { "value": 0 },
+		"machine_max_acceleration_x": { "value": 850 },
+        "machine_max_acceleration_y": { "value": 850 },
+        "machine_max_acceleration_z": { "value": 150 },
+        "machine_max_acceleration_e": { "value": 10 },
+        
+        "machine_max_jerk_xy": { "default_value": 25 },
         
 		"machine_steps_per_mm_x": { "value": 88.573186 },
 		"machine_steps_per_mm_y": { "value": 88.573186 },
@@ -680,6 +681,33 @@ weight = 1
 
 [values]
 layer_height = 0.204
+""",
+    r"%APPDATA%\cura\5.11\quality\makerbot_replicator_z18\mb_replicator_z18_global_Draft_Quality.inst.cfg":
+r"""[general]
+definition = makerbot_replicator_z18
+name = Draft
+version = 4
+
+[metadata]
+global_quality = True
+quality_type = draft
+setting_version = 25
+type = quality
+weight = 1
+
+[values]
+layer_height = 0.306
+line_width = 0.48
+speed_print = 100
+speed_infill = 120
+speed_travel = 175
+bridge_skin_speed = 40
+bridge_wall_speed = 40
+acceleration_print = 850
+infill_sparse_density = 5
+infill_pattern = lighting
+top_layers = 2
+bottom_layers = 2
 """,
     r"%ProgramFiles%\UltiMaker Cura 5.11.0\share\cura\plugins\MakerbotWriter\MakerbotWriter.py":
 r"""# Copyright (c) 2024 UltiMaker
@@ -1121,4 +1149,3 @@ if __name__ == "__main__":
     else:
         print("Requesting administrator rights...")
         run_as_admin()
-
