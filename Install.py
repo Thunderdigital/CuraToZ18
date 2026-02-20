@@ -600,14 +600,16 @@ machine_use_extruder_offset_to_offset_coords = False
 		"machine_max_feedrate_x": { "default_value": 175 },
         "machine_max_feedrate_y": { "default_value": 175 },
 		"machine_max_feedrate_z": { "default_value": 3 },
-        "machine_max_feedrate_e": { "default_value": 8 },
+        "machine_max_feedrate_e": { "default_value": 100 },
 
 		"machine_max_acceleration_x": { "value": 850 },
         "machine_max_acceleration_y": { "value": 850 },
         "machine_max_acceleration_z": { "value": 150 },
-        "machine_max_acceleration_e": { "value": 10 },
+        "machine_max_acceleration_e": { "value": 3000 },
         
         "machine_max_jerk_xy": { "default_value": 25 },
+		"machine_max_jerk_z": { "value": 0.4 },
+		"machine_max_jerk_e": { "value": 5 },
         
 		"machine_steps_per_mm_x": { "value": 88.573186 },
 		"machine_steps_per_mm_y": { "value": 88.573186 },
@@ -1149,3 +1151,4 @@ if __name__ == "__main__":
     else:
         print("Requesting administrator rights...")
         run_as_admin()
+
